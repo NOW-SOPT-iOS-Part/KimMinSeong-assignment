@@ -60,7 +60,8 @@ extension UIButton {
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private var buttonIsActive: Bool? = nil
-    private var deleteButtonIsActive: Bool? = nil
+    private var secureButtonIsActive: Bool? = nil
+    
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -168,6 +169,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let button = UIButton()
         button.setImage(UIImage(named: "Eye_Slash_Icon"), for: .normal)
         button.addTarget(self, action: #selector(securityButtonDidTap), for: .touchUpInside)
+        secureButtonIsActive = false
         return button
     }()
     
@@ -310,7 +312,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @objc func securityButtonDidTap() {
 //        secureButtonIsOn()
         passwordTextField.isSecureTextEntry.toggle()
+        secureButtonIsActive!.toggle()
+        
+        switch secureButtonIsActive! {
+        case true:
+            secureButton.setImage(UIImage(named: "Eye_Icon"), for: .normal)
+            
+        case false:
+            secureButton.setImage(UIImage(named: "Eye_Slash_Icon"), for: .normal)
+        }
+        
         print("security")
+        
     }
     
 //    private func secureButtonIsOn() {

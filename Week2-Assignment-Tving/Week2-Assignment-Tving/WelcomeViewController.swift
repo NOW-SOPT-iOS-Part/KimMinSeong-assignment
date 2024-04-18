@@ -43,6 +43,11 @@ class WelcomeViewController: UIViewController {
         return button
     }()
     
+    private func bindEmail() {
+        guard let emailText = email else { return }
+        self.welcomeMessage.text = "\(emailText)님 \n반가워요!"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +55,8 @@ class WelcomeViewController: UIViewController {
         [welcomeImage, welcomeMessage, backToMainButton].forEach {
             self.view.addSubview($0)
             self.navigationController?.isNavigationBarHidden = true // 네비게이션 바를 비활성화하는 코드 뷰의 생명 주기상 뷰가 띄우는 함수 안에 넣어야할 것 같아서 여기에 넣음.
+            
+        bindEmail()
         }
         
         // iPhone 13 pro 기준 (390x844)
