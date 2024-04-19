@@ -15,48 +15,6 @@ import Foundation
 import UIKit
 import SnapKit
 
-extension UITextField {
-    func setPlaceholder(color: UIColor) {
-        guard let string = self.placeholder else {
-            return
-        }
-        attributedPlaceholder = NSAttributedString(string: string, attributes: [.foregroundColor: color])
-    }
-}
-
-// Text Field에 패딩 주기
-extension UITextField {
-    
-    /// 텍스트필드 안쪽에 패딩 추가
-    /// - Parameter left: 왼쪽에 추가할 패딩 너비
-    /// - Parameter right: 오른쪽에 추가할 패딩 너비
-    func addPadding(left: CGFloat? = nil, right: CGFloat? = nil) {
-        if let left {
-            leftView = UIView(frame: CGRect(x: 0, y: 0, width: left, height: 0))
-            leftViewMode = .always
-        }
-        if let right {
-            rightView = UIView(frame: CGRect(x: 0, y: 0, width: right, height: 0))
-            rightViewMode = .always
-        }
-    }
-}
-
-// UIButton에 underline 추가하기
-extension UIButton {
- 
-    func underlineTitle(forTitle: String) {
-        guard let buttonTitle = self.titleLabel?.text else { return }
-        
-        let rangeToUnderLine = (buttonTitle as NSString).range(of: forTitle)
-        
-        let underLineTitle = NSMutableAttributedString(string: buttonTitle)
-        underLineTitle.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: rangeToUnderLine)
-        
-        self.setAttributedTitle(underLineTitle, for: .normal)
-    }
-}
-
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private var buttonIsActive: Bool? = nil
@@ -94,7 +52,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.layer.masksToBounds = true
         textField.layer.cornerRadius = 3
         textField.isSecureTextEntry = true
-//        textField.rightViewMode = .always
         return textField
     }()
     
@@ -110,8 +67,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 3
         button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
-//        var idConditon = idTextFieldCondition()
-//        var passwordCondition = passwordTextFieldCondition()
         return button
     }()
     
@@ -163,8 +118,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return button
     }()
     
-    // rightView로 설정해놨더니 layout이 갑자기 이상한대로 감...
-    // UITextField가 FirstResponder라서 textField는 자기안에서 발생하는 모든 이벤트의 Responder가 되기 때문에 버튼을 탭해도 이벤트가 전해지지 않음... -> UITextField의 rightView 속성을 이용해서 해결
     private lazy var secureButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "Eye_Slash_Icon"), for: .normal)
@@ -198,12 +151,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         [titleLabel, idTextField, passwordTextField, loginButton, findIDButton, verticalBar, findPasswordButton, accountLabel, makeNicknameButton, deleteButton, secureButton].forEach {
             self.view.addSubview($0)
         }
-        
-//        [deleteButton, secureButton].forEach {
-//            self.passwordTextField.addSubview($0)
-//        }
-        
-        
         
         // iPhone 13 pro 기준 (390x844)
         // button leading value is 27.5px
@@ -326,18 +273,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-//    private func secureButtonIsOn() {
-        
-//        switch passwordTextField.isSecureTextEntry {
-//        case true:
-//            passwordTextField.isSecureTextEntry = false
-//        
-//        case false:
-//            passwordTextField.isSecureTextEntry = true
-//    
-//        }
-//    }
-    
     // 로그인 버튼 tap시 WelcomeViewController로 navigate하는 기능 구현
     @objc func loginButtonDidTap() {
         if buttonIsActive == true  {
@@ -378,18 +313,6 @@ extension LoginViewController {
             loginButton.setTitleColor(UIColor(resource: .gray2), for: .normal)
             loginButton.layer.borderWidth = 1
         }
-        
-        /* switch statement로 변경한게 가독성이 훨 좋음
-        if isOn == true {
-         loginButton.isUserInteractionEnabled = true
-         loginButton.backgroundColor = UIColor(resource: .brandRed)
-         loginButton.layer.borderWidth = 0
-        } else {
-            loginButton.isUserInteractionEnabled = false
-            loginButton.backgroundColor = .black
-            loginButton.layer.borderWidth = 1
-        }
-        */
     }
     
     // 유저가 textField에서 editing을 끝냈을 때
@@ -402,42 +325,46 @@ extension LoginViewController {
         }
     }
     
-    // clear button
-    /*
-     textField Delegate 패턴에는 내용을 삭제할 때 호출되는 textFieldShouldClear(_ textField: UITextField)가 있다. 일단 이걸 이용하면 될 것 같은데...
-     아니면 textFieldShouldBeginEditing() 안에서 구현이 되어야 할 것 같기도 함. 이때, passwordTextField가 비어있지만 않으면 버튼을 이용할 수 있는 것이니까.
-     
-     근데 버튼의 기능은 또 어디에서 구현하지...? 이는 버튼과 관련된 메소드를 이용하면 될 듯.(2024.04.16)
-     
-     secureButton 구현해보니까 똑같이 하면 될 것 같기도 하고(2024.04.17)
-     */
 }
 
-/* textField 정규식 만족되면 버튼 색 변경
-extension LoginViewController {
-    // idTextField에 입력된 내용이 이메일 형식이면 return true
-    func idTextFieldCondition(_ tf: UITextField,_ cv: UIView,_ errorLabel: UILabel,_ regex: String) {
-        
-    }
-    
-    // 비밀번호가 9자리 넘으면 return true
-    func passwordTextFieldCondition() {
-        let pwRegEx = "^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-]).{8,50}" // 영어 + 숫자 + 특수문자
-    }
-    
-//    func textFieldDidChangeSelection(idCondition: Bool, passwordCondition: Bool) {
-//        if idCondition && passwordCondition {
-//            loginButton.backgroundColor = UIColor(resource: .brandRed)
-//        }
-//    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        if textField == idTextField {
-            // id 유효성 검사
-        } else if textField == passwordTextField {
-            // password 유효성 검사
+extension UITextField {
+    func setPlaceholder(color: UIColor) {
+        guard let string = self.placeholder else {
+            return
         }
-        
+        attributedPlaceholder = NSAttributedString(string: string, attributes: [.foregroundColor: color])
     }
 }
-*/
+
+// Text Field에 패딩 주기
+extension UITextField {
+    
+    /// 텍스트필드 안쪽에 패딩 추가
+    /// - Parameter left: 왼쪽에 추가할 패딩 너비
+    /// - Parameter right: 오른쪽에 추가할 패딩 너비
+    func addPadding(left: CGFloat? = nil, right: CGFloat? = nil) {
+        if let left {
+            leftView = UIView(frame: CGRect(x: 0, y: 0, width: left, height: 0))
+            leftViewMode = .always
+        }
+        if let right {
+            rightView = UIView(frame: CGRect(x: 0, y: 0, width: right, height: 0))
+            rightViewMode = .always
+        }
+    }
+}
+
+// UIButton에 underline 추가하기
+extension UIButton {
+ 
+    func underlineTitle(forTitle: String) {
+        guard let buttonTitle = self.titleLabel?.text else { return }
+        
+        let rangeToUnderLine = (buttonTitle as NSString).range(of: forTitle)
+        
+        let underLineTitle = NSMutableAttributedString(string: buttonTitle)
+        underLineTitle.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: rangeToUnderLine)
+        
+        self.setAttributedTitle(underLineTitle, for: .normal)
+    }
+}
