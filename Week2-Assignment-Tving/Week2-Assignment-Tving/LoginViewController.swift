@@ -255,9 +255,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.text = ""
     }
     
-    // 비밀번호 보안 버튼 활성화 및 비활성화 기능 구현
     @objc func securityButtonDidTap() {
-//        secureButtonIsOn()
         passwordTextField.isSecureTextEntry.toggle()
         secureButtonIsActive!.toggle()
         
@@ -273,7 +271,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    // 로그인 버튼 tap시 WelcomeViewController로 navigate하는 기능 구현
     @objc func loginButtonDidTap() {
         if buttonIsActive == true  {
             pushToWelcomeVC()
@@ -317,7 +314,6 @@ extension LoginViewController {
     
     // 유저가 textField에서 editing을 끝냈을 때
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        // 두 개의 textField가 비어있지 않다면 버튼을 활성화 시키고 boder를 0으로 만들어줌.
         if idTextField.hasText && passwordTextField.hasText {
             loginButtonIsOn(isOn: true)
         } else {
