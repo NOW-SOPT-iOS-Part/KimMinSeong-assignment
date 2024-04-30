@@ -54,7 +54,7 @@ final class HomeView: UIView {
         }
         
         logoView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalToSuperview() // fix point
         }
 
 

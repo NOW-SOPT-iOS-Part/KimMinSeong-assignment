@@ -54,10 +54,10 @@ class WelcomeViewController: UIViewController {
         self.view.backgroundColor = .black
         [welcomeImage, welcomeMessage, backToMainButton].forEach {
             self.view.addSubview($0)
-            self.navigationController?.isNavigationBarHidden = true // 네비게이션 바를 비활성화하는 코드 뷰의 생명 주기상 뷰가 띄우는 함수 안에 넣어야할 것 같아서 여기에 넣음.
             
         bindEmail()
         }
+        self.navigationController?.isNavigationBarHidden = true // 네비게이션 바를 비활성화하는 코드 뷰의 생명 주기상 뷰가 띄우는 함수 안에 넣어야할 것 같아서 여기에 넣음.
         
         // iPhone 13 pro 기준 (390x844)
         // button leading value is 27.5px

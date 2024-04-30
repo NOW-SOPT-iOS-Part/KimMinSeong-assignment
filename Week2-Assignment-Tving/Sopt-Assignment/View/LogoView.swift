@@ -44,8 +44,6 @@ final class LogoView: UIView {
     
     func setHierarchy() {
         addSubviews(
-            tvingLogo,
-            userProfile,
             HStackView
         )
     }
