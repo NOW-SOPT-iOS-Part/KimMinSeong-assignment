@@ -62,8 +62,12 @@ private extension HomeViewHeaderCell {
             $0.trailing.equalToSuperview().inset(8)
             $0.centerY.equalToSuperview()
         }
-
-
+    }
+    
+}
+// MARK: extensions
+extension HomeViewHeaderCell {
+    func bindTitle(title: String = "기본 내용" ) {
+        self.titleLabel.text = title
     }
 }
-

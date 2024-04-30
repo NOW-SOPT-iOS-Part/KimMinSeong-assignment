@@ -11,11 +11,12 @@ import Then
 
 class PopularLiveChannelCollectionViewCell: UICollectionViewCell {
     
-    // MARK: UI Components
+    // MARK: Property
     
+    // MARK: UI Components
     // 마땅한 이미지가 없어서 도형으로 대체
-    private let liveChannelImage = UIView().then {
-        $0.backgroundColor = .black
+    private let liveChannelImage = UIImageView().then {
+        $0.image = UIImage(resource: .image1)
     }
     
     private let rankingLabel = UILabel().then {
@@ -91,9 +92,12 @@ class PopularLiveChannelCollectionViewCell: UICollectionViewCell {
             $0.leading.equalToSuperview().offset(36)
         }
     }
+    
 }
 
 // MARK: extensions
-
-
-
+extension PopularLiveChannelCollectionViewCell {
+    func bindData(image: UIImage) {
+        self.liveChannelImage.image = image
+    }
+}

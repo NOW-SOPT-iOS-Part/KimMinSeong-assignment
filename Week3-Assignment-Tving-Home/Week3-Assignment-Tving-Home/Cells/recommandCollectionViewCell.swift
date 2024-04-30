@@ -11,8 +11,9 @@ import SnapKit
 
 class recommandCollectionViewCell: UICollectionViewCell {
     
-    // MARK: UIComponents
+    // MARK: Property
     
+    // MARK: UIComponents
     private let imageView = UIImageView().then {
         $0.image = UIImage(resource: .image1)
     }
@@ -62,6 +63,10 @@ class recommandCollectionViewCell: UICollectionViewCell {
 
 
     }
+    
+    func bindData(image: UIImage) {
+            self.imageView.image = image
+        }
     
     
 }
