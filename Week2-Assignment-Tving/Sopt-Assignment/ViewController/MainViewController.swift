@@ -50,6 +50,9 @@ final class MainViewController: UIViewController, UICollectionViewDelegate {
     // MARK: Life Cycles
     override func loadView() {
         self.view = homeView
+        if let navigationController = self.navigationController {
+            navigationController.setNavigationBarHidden(true, animated: false)
+        }
     }
     
     override func viewDidLoad() {

@@ -51,7 +51,7 @@
 		B886F24E2BE146470011567B /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		B886F2512BE1464C0011567B /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		B886F25F2BE14D350011567B /* className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = className.swift; sourceTree = "<group>"; };
-		B8A05C5F2BC700D500607CDA /* Week2-Assignment-Tving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Week2-Assignment-Tving.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A05C5F2BC700D500607CDA /* SOPT-Assignment-Tving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPT-Assignment-Tving.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A05C622BC700D500607CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A05C642BC700D500607CDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B8A05C662BC700D500607CDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		B8A05C602BC700D500607CDA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B8A05C5F2BC700D500607CDA /* Week2-Assignment-Tving.app */,
+				B8A05C5F2BC700D500607CDA /* SOPT-Assignment-Tving.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,9 +197,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B8A05C5E2BC700D500607CDA /* Week2-Assignment-Tving */ = {
+		B8A05C5E2BC700D500607CDA /* SOPT-Assignment-Tving */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B8A05C732BC700D600607CDA /* Build configuration list for PBXNativeTarget "Week2-Assignment-Tving" */;
+			buildConfigurationList = B8A05C732BC700D600607CDA /* Build configuration list for PBXNativeTarget "SOPT-Assignment-Tving" */;
 			buildPhases = (
 				B8A05C5B2BC700D500607CDA /* Sources */,
 				B8A05C5C2BC700D500607CDA /* Frameworks */,
@@ -209,7 +209,7 @@
 			);
 			dependencies = (
 			);
-			name = "Week2-Assignment-Tving";
+			name = "SOPT-Assignment-Tving";
 			packageProductDependencies = (
 				B8A05C792BC706E200607CDA /* SnapKit */,
 				B8A05C7B2BC706E200607CDA /* SnapKit-Dynamic */,
@@ -217,7 +217,7 @@
 				B886F25D2BE1470D0011567B /* Moya */,
 			);
 			productName = "Week2-Assignment-Tving";
-			productReference = B8A05C5F2BC700D500607CDA /* Week2-Assignment-Tving.app */;
+			productReference = B8A05C5F2BC700D500607CDA /* SOPT-Assignment-Tving.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B8A05C5A2BC700D500607CDA /* Build configuration list for PBXProject "Week2-Assignment-Tving" */;
+			buildConfigurationList = B8A05C5A2BC700D500607CDA /* Build configuration list for PBXProject "SOPT-Assignment-Tving" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -253,7 +253,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B8A05C5E2BC700D500607CDA /* Week2-Assignment-Tving */,
+				B8A05C5E2BC700D500607CDA /* SOPT-Assignment-Tving */,
 			);
 		};
 /* End PBXProject section */
@@ -501,7 +501,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B8A05C5A2BC700D500607CDA /* Build configuration list for PBXProject "Week2-Assignment-Tving" */ = {
+		B8A05C5A2BC700D500607CDA /* Build configuration list for PBXProject "SOPT-Assignment-Tving" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8A05C712BC700D600607CDA /* Debug */,
@@ -510,7 +510,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B8A05C732BC700D600607CDA /* Build configuration list for PBXNativeTarget "Week2-Assignment-Tving" */ = {
+		B8A05C732BC700D600607CDA /* Build configuration list for PBXNativeTarget "SOPT-Assignment-Tving" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B8A05C742BC700D600607CDA /* Debug */,

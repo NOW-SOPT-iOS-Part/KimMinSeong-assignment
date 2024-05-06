@@ -19,11 +19,14 @@ final class LogoView: UIView {
     
     private let userProfile = UIImageView().then {
         $0.image = UIImage(resource: .userProfile)
+        $0.layer.cornerRadius = 16.5
+        $0.clipsToBounds = true
     }
     
     private lazy var HStackView = UIStackView(arrangedSubviews: [tvingLogo, userProfile]).then {
         $0.axis = .horizontal
-        $0.spacing = 223
+        $0.spacing = 245
+        $0.alignment = .center
     }
     
     override init(frame: CGRect) {
@@ -51,8 +54,22 @@ final class LogoView: UIView {
     func setLayout() {
         HStackView.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
-            $0.horizontalEdges.equalToSuperview().inset(11)
+            $0.horizontalEdges.equalToSuperview().inset(12)
+            $0.height.equalTo(94)
         }
+        
+        tvingLogo.snp.makeConstraints {
+            $0.width.equalTo(94)
+            $0.height.equalTo(25)
+        }
+        
+        userProfile.snp.makeConstraints {
+            $0.width.equalTo(33)
+            $0.height.equalTo(33)
+            
+        }
+
+
 
     }
 }
