@@ -9,7 +9,7 @@ import UIKit
 import Then
 import SnapKit
 
-class RecommandCollectionViewCell: UICollectionViewCell {
+class : UICollectionViewCell {
     
     // MARK: Property
     

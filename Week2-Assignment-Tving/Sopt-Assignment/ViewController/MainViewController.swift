@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Combine
 
 enum HomeSection: Int, CaseIterable {
     case main = 0
@@ -33,13 +32,12 @@ final class MainViewController: UIViewController, UICollectionViewDelegate {
     private let titleLists: [String] = [
         "티빙에서 꼭 봐야하는 콘텐츠",
         "인기 LIVE 채널",
-        "2번"
     ]
     
     private let imagesBySection: [Int: [UIImage]] = [
         0: [UIImage(resource: .mainImage1), UIImage(resource: .mainImage1), UIImage(resource: .mainImage1), UIImage(resource: .mainImage1), UIImage(resource: .mainImage1)],
         1: [UIImage(resource: .image1), UIImage(resource: .image1), UIImage(resource: .image1), UIImage(resource: .image1), UIImage(resource: .image1), UIImage(resource: .image1), UIImage(resource: .image1), UIImage(resource: .image1)],
-        2: [UIImage(resource: .image1), UIImage(resource: .image1), UIImage(resource: .image1), UIImage(resource: .image1)],
+        2: [UIImage(resource: .image2), UIImage(resource: .image2), UIImage(resource: .image2), UIImage(resource: .image2)],
     ]
     
     private var mainModelItems: [mainModel] = mainModel.getData()
@@ -101,6 +99,7 @@ extension MainViewController: UICollectionViewDataSource {
             cell.bindData(image: model.image, title: model.title, info: model.info)
             return cell
             
+        // recommand cell에서 이미지가 제대로 뜨지 않음.
         case .recommand:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeSection.recommand.identifier, for: indexPath) as! RecommandCollectionViewCell
             
@@ -124,14 +123,15 @@ extension MainViewController: UICollectionViewDataSource {
         guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HomeViewHeaderCell.className, for: indexPath) as? HomeViewHeaderCell else {
             return UICollectionReusableView()
         }
+        
         let section = HomeSection(rawValue: indexPath.section)!
         switch section {
-        case .main:
-            headerView.bindTitle(title: titleLists[0])
+        case .main: break
+            
         case .recommand:
-            headerView.bindTitle(title: titleLists[1])
+            headerView.bindTitle(title: titleLists[0])
         case .live:
-            headerView.bindTitle(title: titleLists[2])
+            headerView.bindTitle(title: titleLists[1])
         }
         return headerView
     

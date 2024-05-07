@@ -14,7 +14,6 @@ class PopularLiveChannelCollectionViewCell: UICollectionViewCell {
     // MARK: Property
     
     // MARK: UI Components
-    // 마땅한 이미지가 없어서 도형으로 대체
     private let liveChannelImage = UIImageView().then {
         $0.image = UIImage(resource: .image1)
     }
@@ -22,10 +21,9 @@ class PopularLiveChannelCollectionViewCell: UICollectionViewCell {
     private let rankingLabel = UILabel().then {
         let italicFont = UIFont.italicSystemFont(ofSize: 20)
         let attributedString = NSAttributedString(string: "1", attributes: [NSAttributedString.Key.font: italicFont])
-        
+
         $0.attributedText = attributedString
         $0.textColor = .white
-        
     }
     
     private let channelLabel = UILabel().then {
@@ -47,7 +45,7 @@ class PopularLiveChannelCollectionViewCell: UICollectionViewCell {
     }
     
     // 각 라벨들이 나오기 전에 vstackView가 호울이 될 수 있으니 lazy로 처리
-    private lazy var vstackView = UIStackView(arrangedSubviews: [channelLabel, episodeLabel, progressLabel]).then {
+    private lazy var VStackView = UIStackView(arrangedSubviews: [channelLabel, episodeLabel, progressLabel]).then {
         $0.axis = .vertical
         $0.spacing = 4
         $0.alignment = .leading
@@ -70,7 +68,7 @@ class PopularLiveChannelCollectionViewCell: UICollectionViewCell {
         addSubviews(
             liveChannelImage,
             rankingLabel,
-            vstackView
+            VStackView
         )
     }
     
@@ -87,7 +85,7 @@ class PopularLiveChannelCollectionViewCell: UICollectionViewCell {
             $0.leading.equalToSuperview().offset(18)
         }
         
-        vstackView.snp.makeConstraints {
+        VStackView.snp.makeConstraints {
             $0.top.equalTo(liveChannelImage.snp.bottom).offset(11)
             $0.leading.equalToSuperview().offset(36)
         }
