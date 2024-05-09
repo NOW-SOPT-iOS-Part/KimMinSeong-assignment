@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B87E7EE12BED2B91002D795D /* WeeklyBoxOfficeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EE02BED2B91002D795D /* WeeklyBoxOfficeView.swift */; };
+		B87E7EE52BED4090002D795D /* WeeklyBoxOfficeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EE42BED4090002D795D /* WeeklyBoxOfficeCollectionViewCell.swift */; };
+		B87E7EE92BED41A9002D795D /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EE82BED41A9002D795D /* MoyaLoggingPlugin.swift */; };
+		B87E7EEB2BED41CC002D795D /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EEA2BED41CC002D795D /* NetworkResult.swift */; };
+		B87E7EED2BED41E1002D795D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EEC2BED41E1002D795D /* Config.swift */; };
+		B87E7EF02BED4388002D795D /* MovieInfoResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EEF2BED4388002D795D /* MovieInfoResponseModel.swift */; };
+		B87E7EF22BED43A3002D795D /* MovieInfoRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EF12BED43A3002D795D /* MovieInfoRequestModel.swift */; };
+		B87E7EF42BED46BB002D795D /* AddTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EF32BED46BB002D795D /* AddTargetType.swift */; };
+		B87E7EF62BED46D4002D795D /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EF52BED46D4002D795D /* MovieService.swift */; };
+		B87E7EF92BED53EA002D795D /* WeeklyBoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EF82BED53EA002D795D /* WeeklyBoxOfficeViewController.swift */; };
 		B886F2422BE146160011567B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B886F2412BE146160011567B /* Extensions.swift */; };
 		B886F2442BE146240011567B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B886F2432BE146240011567B /* MainViewController.swift */; };
 		B886F2482BE1463C0011567B /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B886F2452BE1463C0011567B /* MainCollectionViewCell.swift */; };
@@ -41,6 +51,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B87E7EE02BED2B91002D795D /* WeeklyBoxOfficeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBoxOfficeView.swift; sourceTree = "<group>"; };
+		B87E7EE42BED4090002D795D /* WeeklyBoxOfficeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBoxOfficeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B87E7EE82BED41A9002D795D /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
+		B87E7EEA2BED41CC002D795D /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		B87E7EEC2BED41E1002D795D /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B87E7EEF2BED4388002D795D /* MovieInfoResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoResponseModel.swift; sourceTree = "<group>"; };
+		B87E7EF12BED43A3002D795D /* MovieInfoRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoRequestModel.swift; sourceTree = "<group>"; };
+		B87E7EF32BED46BB002D795D /* AddTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTargetType.swift; sourceTree = "<group>"; };
+		B87E7EF52BED46D4002D795D /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		B87E7EF82BED53EA002D795D /* WeeklyBoxOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBoxOfficeViewController.swift; sourceTree = "<group>"; };
 		B886F2412BE146160011567B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B886F2432BE146240011567B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B886F2452BE1463C0011567B /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -87,9 +107,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B87E7EE22BED3B1E002D795D /* WeeklyBoxOfficeCell */ = {
+			isa = PBXGroup;
+			children = (
+				B87E7EE42BED4090002D795D /* WeeklyBoxOfficeCollectionViewCell.swift */,
+			);
+			path = WeeklyBoxOfficeCell;
+			sourceTree = "<group>";
+		};
+		B87E7EE62BED40B4002D795D /* BasicCodes */ = {
+			isa = PBXGroup;
+			children = (
+				B8A05C622BC700D500607CDA /* AppDelegate.swift */,
+				B8A05C642BC700D500607CDA /* SceneDelegate.swift */,
+				B8A05C662BC700D500607CDA /* ViewController.swift */,
+				B8A05C682BC700D500607CDA /* Main.storyboard */,
+				B8A05C6D2BC700D600607CDA /* LaunchScreen.storyboard */,
+			);
+			path = BasicCodes;
+			sourceTree = "<group>";
+		};
+		B87E7EE72BED40E2002D795D /* NetworkBasicCodes */ = {
+			isa = PBXGroup;
+			children = (
+				B87E7EE82BED41A9002D795D /* MoyaLoggingPlugin.swift */,
+				B87E7EEA2BED41CC002D795D /* NetworkResult.swift */,
+				B87E7EEC2BED41E1002D795D /* Config.swift */,
+			);
+			path = NetworkBasicCodes;
+			sourceTree = "<group>";
+		};
+		B87E7EEE2BED435F002D795D /* PatchMovieInfo */ = {
+			isa = PBXGroup;
+			children = (
+				B87E7EEF2BED4388002D795D /* MovieInfoResponseModel.swift */,
+				B87E7EF12BED43A3002D795D /* MovieInfoRequestModel.swift */,
+				B87E7EF32BED46BB002D795D /* AddTargetType.swift */,
+				B87E7EF52BED46D4002D795D /* MovieService.swift */,
+			);
+			path = PatchMovieInfo;
+			sourceTree = "<group>";
+		};
 		B886F2532BE146550011567B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B87E7EE22BED3B1E002D795D /* WeeklyBoxOfficeCell */,
 				B886F2552BE1468D0011567B /* HeaderCells */,
 				B886F2452BE1463C0011567B /* MainCollectionViewCell.swift */,
 				B886F2472BE1463C0011567B /* RecommandCollectionViewCell.swift */,
@@ -104,6 +166,7 @@
 				B8A05C762BC7016000607CDA /* LoginViewController.swift */,
 				B8A5888A2BCA6E6F00E2D7B0 /* WelcomeViewController.swift */,
 				B886F2432BE146240011567B /* MainViewController.swift */,
+				B87E7EF82BED53EA002D795D /* WeeklyBoxOfficeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -121,6 +184,7 @@
 			children = (
 				B886F24E2BE146470011567B /* LogoView.swift */,
 				B886F24D2BE146470011567B /* HomeView.swift */,
+				B87E7EE02BED2B91002D795D /* WeeklyBoxOfficeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +200,7 @@
 		B886F2582BE146C80011567B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B886F25F2BE14D350011567B /* className.swift */,
 				B886F2412BE146160011567B /* Extensions.swift */,
 			);
 			path = Extensions;
@@ -161,19 +226,16 @@
 		B8A05C612BC700D500607CDA /* Sopt-Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				B8A05C622BC700D500607CDA /* AppDelegate.swift */,
-				B8A05C642BC700D500607CDA /* SceneDelegate.swift */,
-				B8A05C662BC700D500607CDA /* ViewController.swift */,
-				B8A05C682BC700D500607CDA /* Main.storyboard */,
-				B8A05C6B2BC700D600607CDA /* Assets.xcassets */,
-				B8A05C6D2BC700D600607CDA /* LaunchScreen.storyboard */,
-				B8A05C702BC700D600607CDA /* Info.plist */,
+				B87E7EEE2BED435F002D795D /* PatchMovieInfo */,
+				B87E7EE72BED40E2002D795D /* NetworkBasicCodes */,
+				B87E7EE62BED40B4002D795D /* BasicCodes */,
 				B886F2582BE146C80011567B /* Extensions */,
 				B886F2562BE1469A0011567B /* View */,
 				B886F2542BE1466E0011567B /* ViewController */,
 				B886F2532BE146550011567B /* Cells */,
 				B886F2572BE146AC0011567B /* Model */,
-				B886F25F2BE14D350011567B /* className.swift */,
+				B8A05C702BC700D600607CDA /* Info.plist */,
+				B8A05C6B2BC700D600607CDA /* Assets.xcassets */,
 			);
 			path = "Sopt-Assignment";
 			sourceTree = "<group>";
@@ -285,21 +347,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87E7EE92BED41A9002D795D /* MoyaLoggingPlugin.swift in Sources */,
 				B886F2442BE146240011567B /* MainViewController.swift in Sources */,
 				B886F2492BE1463C0011567B /* PopularLiveChannelCollectionViewCell.swift in Sources */,
 				B886F24C2BE146400011567B /* HomeViewHeaderCell.swift in Sources */,
 				B8A05C772BC7016000607CDA /* LoginViewController.swift in Sources */,
 				B886F2422BE146160011567B /* Extensions.swift in Sources */,
+				B87E7EF62BED46D4002D795D /* MovieService.swift in Sources */,
 				B886F2602BE14D350011567B /* className.swift in Sources */,
+				B87E7EE12BED2B91002D795D /* WeeklyBoxOfficeView.swift in Sources */,
+				B87E7EE52BED4090002D795D /* WeeklyBoxOfficeCollectionViewCell.swift in Sources */,
+				B87E7EF92BED53EA002D795D /* WeeklyBoxOfficeViewController.swift in Sources */,
 				B886F2482BE1463C0011567B /* MainCollectionViewCell.swift in Sources */,
 				B8A5888B2BCA6E6F00E2D7B0 /* WelcomeViewController.swift in Sources */,
 				B8A05C672BC700D500607CDA /* ViewController.swift in Sources */,
 				B8A05C632BC700D500607CDA /* AppDelegate.swift in Sources */,
 				B886F24F2BE146470011567B /* HomeView.swift in Sources */,
+				B87E7EF22BED43A3002D795D /* MovieInfoRequestModel.swift in Sources */,
 				B886F2522BE1464C0011567B /* HomeModel.swift in Sources */,
 				B8A05C652BC700D500607CDA /* SceneDelegate.swift in Sources */,
 				B886F2502BE146470011567B /* LogoView.swift in Sources */,
+				B87E7EED2BED41E1002D795D /* Config.swift in Sources */,
 				B886F24A2BE1463C0011567B /* RecommandCollectionViewCell.swift in Sources */,
+				B87E7EF02BED4388002D795D /* MovieInfoResponseModel.swift in Sources */,
+				B87E7EF42BED46BB002D795D /* AddTargetType.swift in Sources */,
+				B87E7EEB2BED41CC002D795D /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -476,6 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
