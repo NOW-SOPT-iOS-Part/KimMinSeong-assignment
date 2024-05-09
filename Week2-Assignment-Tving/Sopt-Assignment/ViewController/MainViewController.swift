@@ -43,6 +43,7 @@ final class MainViewController: UIViewController, UICollectionViewDelegate {
     private var mainModelItems: [mainModel] = mainModel.getData()
     
     // MARK: UIComponents
+    
     let homeView = HomeView()
     
     // MARK: Life Cycles
