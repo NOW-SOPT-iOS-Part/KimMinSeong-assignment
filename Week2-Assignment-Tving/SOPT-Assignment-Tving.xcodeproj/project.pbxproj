@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80A766E2C0A3B8300320BED /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80A766D2C0A3B8300320BED /* LoginView.swift */; };
 		B87E7EE12BED2B91002D795D /* WeeklyBoxOfficeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EE02BED2B91002D795D /* WeeklyBoxOfficeView.swift */; };
 		B87E7EE52BED4090002D795D /* WeeklyBoxOfficeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EE42BED4090002D795D /* WeeklyBoxOfficeCollectionViewCell.swift */; };
 		B87E7EE92BED41A9002D795D /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E7EE82BED41A9002D795D /* MoyaLoggingPlugin.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B80A766D2C0A3B8300320BED /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B87E7EE02BED2B91002D795D /* WeeklyBoxOfficeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBoxOfficeView.swift; sourceTree = "<group>"; };
 		B87E7EE42BED4090002D795D /* WeeklyBoxOfficeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyBoxOfficeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B87E7EE82BED41A9002D795D /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				B886F24E2BE146470011567B /* LogoView.swift */,
 				B886F24D2BE146470011567B /* HomeView.swift */,
 				B87E7EE02BED2B91002D795D /* WeeklyBoxOfficeView.swift */,
+				B80A766D2C0A3B8300320BED /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				B886F2602BE14D350011567B /* className.swift in Sources */,
 				B87E7EE12BED2B91002D795D /* WeeklyBoxOfficeView.swift in Sources */,
 				B87E7EE52BED4090002D795D /* WeeklyBoxOfficeCollectionViewCell.swift in Sources */,
+				B80A766E2C0A3B8300320BED /* LoginView.swift in Sources */,
 				B87E7EF92BED53EA002D795D /* WeeklyBoxOfficeViewController.swift in Sources */,
 				B886F2482BE1463C0011567B /* MainCollectionViewCell.swift in Sources */,
 				B8A5888B2BCA6E6F00E2D7B0 /* WelcomeViewController.swift in Sources */,
