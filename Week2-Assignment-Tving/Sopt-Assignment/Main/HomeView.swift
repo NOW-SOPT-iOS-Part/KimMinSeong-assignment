@@ -26,6 +26,8 @@ final class HomeView: UIView {
     
     private let logoView = LogoView()
     
+    // MARK: - Life Cycles
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -37,15 +39,19 @@ final class HomeView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+// MARK: extensions
+
+extension HomeView {
     
-    private func setUI() {
+    func setUI() {
         backgroundColor = .black
     }
     
-    private func setHierarchy() {
+    func setHierarchy() {
         addSubview(collectionView)
         collectionView.addSubview(logoView)
-        
     }
     
     private func setLayout() {
@@ -56,18 +62,8 @@ final class HomeView: UIView {
         logoView.snp.makeConstraints {
             $0.edges.equalToSuperview() // fix point
         }
-        
-        
     }
-}
-
-// MARK: extensions
-
-private extension HomeView {
-    
-    // MARK: CollectionView Layout
-    
-    private func makeCollectionViewLayout() -> UICollectionViewCompositionalLayout {
+    func makeCollectionViewLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
             
             if sectionNumber == 0 { // MainCollection View Cell에 해당

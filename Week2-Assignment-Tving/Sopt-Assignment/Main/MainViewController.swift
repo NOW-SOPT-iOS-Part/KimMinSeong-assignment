@@ -28,7 +28,8 @@ enum HomeSection: Int, CaseIterable {
 
 final class MainViewController: UIViewController, UICollectionViewDelegate {
     
-    // MARK: property
+    // MARK: properties
+    
     private let titleLists: [String] = [
         "티빙에서 꼭 봐야하는 콘텐츠",
         "인기 LIVE 채널",

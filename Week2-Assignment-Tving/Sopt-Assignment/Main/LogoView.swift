@@ -13,21 +13,9 @@ final class LogoView: UIView {
     
     // MARK: UIComponents
     
-    private let tvingLogo = UIImageView().then {
-        $0.image = UIImage(resource: .logo)
-    }
-    
-    private let userProfile = UIImageView().then {
-        $0.image = UIImage(resource: .userProfile)
-        $0.layer.cornerRadius = 16.5
-        $0.clipsToBounds = true
-    }
-    
-    private lazy var HStackView = UIStackView(arrangedSubviews: [tvingLogo, userProfile]).then {
-        $0.axis = .horizontal
-        $0.spacing = 245
-        $0.alignment = .center
-    }
+    private let tvingLogo = UIImageView()
+    private let userProfile = UIImageView()
+    private lazy var HStackView = UIStackView(arrangedSubviews: [tvingLogo, userProfile])
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +23,7 @@ final class LogoView: UIView {
         setUI()
         setHierarchy()
         setLayout()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -43,6 +32,22 @@ final class LogoView: UIView {
     
     private func setUI() {
         backgroundColor = .clear
+        
+        tvingLogo.do {
+            $0.image = UIImage(resource: .logo)
+        }
+        
+        userProfile.do {
+            $0.image = UIImage(resource: .userProfile)
+            $0.layer.cornerRadius = 16.5
+            $0.clipsToBounds = true
+        }
+        
+        HStackView.do {
+            $0.axis = .horizontal
+            $0.spacing = 245
+            $0.alignment = .center
+        }
     }
     
     func setHierarchy() {

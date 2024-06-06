@@ -1,8 +1,8 @@
 //
-//  Extensions.swift
-//  Week3-Assignment-Tving-Home
+//  UIView+.swift
+//  SOPT-Assignment-Tving
 //
-//  Created by 김민성 on 4/30/24.
+//  Created by 김민성 on 6/7/24.
 //
 
 import UIKit
@@ -20,4 +20,3 @@ extension UIView {
         layer.borderColor = color.cgColor
     }
 }
-
