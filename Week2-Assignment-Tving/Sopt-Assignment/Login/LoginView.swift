@@ -228,12 +228,8 @@ extension LoginView {
     }
     
     func setHierarchy() {
-        [titleLabel, idTextField, passwordTextField, loginButton, findIDButton, verticalBar, findPasswordButton, accountLabel, makeNicknameButton, deleteButton, secureButton].forEach {
-            self.addSubview($0)
-        }
+        addSubviews(titleLabel, idTextField, passwordTextField, loginButton, findIDButton, verticalBar, findPasswordButton, accountLabel, makeNicknameButton, deleteButton, secureButton)
     }
-    
-    
 }
 
 extension UIButton {
